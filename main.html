@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Swipe Report</title>
+  </head>
+  <body>
+    <dialog id="dialog">
+      <p>You must fill in all fields.</p>
+      <button id="close-dialog">Ok</button>
+    </dialog>
+    <button id="reload-page-btn">Restart</button>
+    <div id="card">
+      <h1 id="title">Swipe Report</h1>
+      <div id="form-card">
+        <!-- Name of center input -->
+        <fieldset id="name-of-center-fieldset">
+          <legend for="text-input">Name of center:</legend>
+          <input type="text" name="center-name" id="center-name" />
+        </fieldset>
+
+        <!-- Start date input -->
+        <fieldset id="start-date-input-fieldset">
+          <legend for="start">Start date:</legend>
+          <input type="date" id="start" name="scan-start" />
+        </fieldset>
+        <!-- End date input -->
+        <fieldset id="end-date-input-fieldset">
+          <legend for="end">End date:</legend>
+          <input type="date" name="scan-end" id="end" />
+        </fieldset>
+        <!-- First file input -->
+        <fieldset id="first-file-fieldset">
+          <legend for="file-input">Select file:</legend>
+          <input type="file" accept=".txt" name="file-input" id="file-input" />
+        </fieldset>
+        <!-- Second file input -->
+        <fieldset id="second-file-fieldset">
+          <legend for="file-input">Select second file:</legend>
+          <input
+            type="file"
+            accept=".txt"
+            name="file-input"
+            id="second-file-input"
+          />
+        </fieldset>
+        <div
+          title="Add a second file if your scan covers two months."
+          id="open-drawer"
+        >
+          Add second file
+        </div>
+        <button type="submit" id="scan-btn">Generate Report</button>
+      </div>
+    </div>
+    <div id="output"></div>
+  </body>
+  <script src="script.js"></script>
+</html>
